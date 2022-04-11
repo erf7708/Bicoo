@@ -6,7 +6,7 @@
 	<div class="col-12 bg-white">
 		<p class="box__title">ویرایش دسته بندی <b>{{$category->title_fa}}</b></p>
 		@if ($errors->any())
-			<div class="text-error text t">
+			<div class="text-error text ">
 				<ul>
 					@foreach ($errors->all() as $error)
 						<li>{{ $error }}</li>

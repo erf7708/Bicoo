@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequest\CategoryCreateRequest;
+use App\Http\Requests\AdminRequest\CategoryUpdateRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $categories=Category::all();
+//        $SuperCategories=Category::all();
+        $categories=Category::query()->paginate(12);
+
         return view('admin.category.index',compact('categories'));
     }
 
@@ -75,12 +78,12 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\AdminRequest\CategoryUpdateRequest  $request
      * @param  \App\Models\Category  $category
      *
      * @return void
      */
-    public function update(Request $request, Category $category)
+    public function update(CategoryUpdateRequest $request, Category $category)
     {
         $category->update([
             'category_id'=>$request->get('category_id'),

@@ -608,7 +608,7 @@
 									<div class="product-thumb">
 										<div class="image"><a href="product.html"><img src="/client/image/product/macbook_pro_1-220x330.jpg" alt=" کتاب آموزش باغبانی " title=" کتاب آموزش باغبانی " class="img-responsive" /></a></div>
 										<div class="caption">
-											<h4><a href="product.html"> کتاب آموزش باغبانی </a></h4>
+											<h4><a href="product.html"> کتاب نی </a></h4>
 											<p class="price"> <span class="price-new">98000 تومان</span> <span class="price-old">120000 تومان</span> <span class="saving">-26%</span> </p>
 										</div>
 										<div class="button-group">
